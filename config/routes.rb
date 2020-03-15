@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get  '/contact', to: 'static_pages#contact'
   post '/signup',  to: 'users#create'
   resources :users
+  resources :account_activations, only: [:edit]
 end
